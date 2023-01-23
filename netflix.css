@@ -43,6 +43,13 @@ a:is(:hover,:focus,:active){
 }
 
 @media (max-width:700px) {
+    
+     label>input[type=checkbox]{
+        display: none;
+    }
+    ion-icon{
+        display: none;
+    }
     #dark-mode-div {
         width: 100px;
         height: 40px;
