@@ -1,0 +1,284 @@
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+
+}
+
+:root {
+    --primary-color: #fff;
+    --secondary-color: #000;
+}
+
+.dark {
+    --primary-color: #000;
+    --secondary-color: #fff;
+}
+
+a:is(:hover,:focus,:active){
+    color: green;
+}
+
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+    height: 25px;
+    margin-top: 50px;
+    margin-left: 30px;
+
+}
+
+.logo {
+    box-shadow:
+        inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+        0 0 0 1px var(--primary-color),
+        0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+    color: red;
+
+}
+
+@media (max-width:700px) {
+    #dark-mode-div {
+        width: 100px;
+        height: 40px;
+        position: relative;
+        top: -580px;
+        left: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #dark-mode-div>img {
+        width: 35px;
+        cursor: pointer;
+    }
+}
+
+@media(min-width:700px) {
+
+
+
+    .head {
+        width: 1200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+
+
+.s2>a {
+    width: 70px;
+    height: 70px;
+    background-color: red;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: large;
+    color: var(--primary-color);
+    transition: all 200ms ease-in;
+}
+
+.s2>a:hover {
+
+    text-decoration: underline;
+    background-color: rgba(255, 0, 0, 0.8)
+}
+
+.step {
+    margin-top: 50px;
+}
+
+#plan {
+
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: baseline;
+    margin: 100px 0 0 50px;
+
+
+
+}
+
+.list {
+    list-style: none;
+    font-size: large;
+    line-height: 40px;
+    letter-spacing: 0.3px;
+
+}
+
+.material-symbols-outlined {
+    color: red;
+    align-items: baseline;
+    justify-content: baseline;
+
+
+}
+
+.btn {
+
+    margin: 20px 0 0 15px;
+    width: 250px;
+    height: 15px;
+    text-align: center;
+    padding: 20px;
+    background-color: red;
+    border-radius: 5px;
+
+
+}
+
+.btn>a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: large;
+    font-weight: 500;
+    padding: 10px;
+    transition: all 200ms ease-in;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(255, 0, 0, 0.8);
+}
+
+
+
+
+
+
+
+.demo {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+
+
+
+}
+
+.step {
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+
+
+}
+
+.net {
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+}
+
+
+
+
+
+
+@media (min-width:750px) {
+    .step {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #plan {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-left: 350px;
+
+
+    }
+
+    .net {
+        display: row;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: 100px;
+
+
+    }
+
+    #dark-mode-div {
+        width: 100px;
+        height: 40px;
+        position: relative;
+        top: -540px;
+        right: -540px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    #dark-mode-div>img {
+        width: 35px;
+        cursor: pointer;
+    }
+
+    #lb {
+        position: absolute;
+        top: 55px;
+        right: 20%;
+        width: 86px;
+        height: 35px;
+        display: flex;
+        justify-content: baseline;
+        align-items: center;
+        background-color: #212121;
+        border-radius: 3px;
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+    }
+
+    #lb>span {
+        position: absolute;
+        margin-left: 4px;
+        width: 35px;
+        height: 30px;
+        background-color: #333;
+        border-radius: 12px;
+        cursor: pointer;
+    }
+
+    #lb>input:checked~span {
+        left: 40px;
+    }
+
+    #lb>span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    span ion-icon {
+        color: rgba(255, 255, 255, 0.25);
+        font-size: 1.5em;
+        transition: 0.5s;
+    }
+
+    #lb>input:checked~span ion-icon {
+        color: rgba(255, 255, 255, 1);
+    }
+
+}

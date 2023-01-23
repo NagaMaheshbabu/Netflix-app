@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>netflix</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="netflix.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div>
+
+            <header>
+                <div class="head">
+                    <h1 class="logo">NetFlix</h1>
+                    <span class="s2"><a href="./netflix-signup.html">Sign In</a></span>
+
+
+                </div>
+
+            </header>
+        </div>
+        <hr>
+
+        <div id="plan">
+            <div>
+                <div>
+                    <img src="https://assets.nflxext.com/ffe/siteui/acquisition/simplicity/Checkmark.png" alt="failed"
+                        class="net">
+                    <div>
+                        <span class="step" id="st" style="display: flex;justify-content: baseline;">STEP 1 OF 3</span>
+                    </div>
+                    <h1 class="step" id="step" style="display: flex;justify-content: baseline;">Choose Your Plan.</h1>
+                    <li class="list" id="l1"><span class="material-symbols-outlined">
+                            check
+                        </span>No Commitments,Cancel anytime.</li>
+                    <li class="list" id="l2"><span class="material-symbols-outlined">
+                            check
+                        </span>Every thing on Netflix is on Low Price</li>
+                    <li class="list" id="l3"><span class="material-symbols-outlined">
+                            check
+                        </span>No adds No extra Fee</li>
+                    <div class="btn">
+
+                        <a href="netflix-2.html">NEXT</a>
+
+                    </div>
+
+                </div>
+                <div id="dark-mode-div">
+                    <img src="moon.png" alt="failed" acryonm title="dark mode" id="icon">
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+        <!-----switch to new webpage of netflix with the button on and off----->
+
+
+        <label id="lb">
+            <input type="checkbox" id="bulb">
+            <span><ion-icon name="bulb-outline"></ion-icon></span>
+        </label>
+        <script src="netflix.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script>
+            var icon = document.getElementById("icon");
+            var list = document.getElementById("l1");
+            var list1 = document.getElementById("l2");
+            var list2 = document.getElementById("l3");
+            var h1 = document.getElementById("step");
+            var step = document.getElementById("st");
+            icon.onclick = function () {
+                document.body.classList.toggle("dark");
+                if (document.body.classList.contains("dark")) {
+                    icon.src = "sun.png";
+                    document.body.style.background = "black"
+
+                    list.style.color = "white"
+                    list1.style.color = "white"
+                    list2.style.color = "white"
+                    h1.style.color = "white"
+                    step.style.color = "white"
+
+                }
+                else {
+                    icon.src = "moon.png"
+                    document.body.style.background = "white"
+                    list.style.color = "black"
+                    list1.style.color = "black"
+                    list2.style.color = "black"
+                    h1.style.color = "black"
+                    step.style.color = "black"
+
+
+                }
+            }
+        </script>
+</body>
+
+</html>
